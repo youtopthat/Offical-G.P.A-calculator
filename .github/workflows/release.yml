@@ -1,0 +1,39 @@
+name: Build and publish release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Publish Linux executable
+        run: dotnet publish MyApp/MyApp.csproj --configuration Release --runtime linux-x64 --self-contained true --output release/linux-x64
+
+      - name: Publish Windows executable
+        run: dotnet publish MyApp/MyApp.csproj --configuration Release --runtime win-x64 --self-contained true --output release/win-x64
+
+      - name: Create download archives
+        run: |
+          cd release
+          zip -qr ../MyApp-linux-x64.zip linux-x64
+          zip -qr ../MyApp-win-x64.zip win-x64
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release create "${GITHUB_REF_NAME}" MyApp-linux-x64.zip MyApp-win-x64.zip --generate-notes --title "GPA Calculator ${GITHUB_REF_NAME}"
