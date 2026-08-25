@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A simple weighted GPA calculator.">
+  <title>GPA Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="masthead">
+      <div>
+        <p class="kicker">Academic toolkit <span></span> 2026</p>
+        <h1>Know your <em>number.</em></h1>
+        <p class="intro">Turn your grades and credits into a clear weighted GPA in seconds.</p>
+      </div>
+      <div class="mark" aria-hidden="true">GPA<br><strong>04</strong></div>
+    </header>
+
+    <section class="workspace" aria-label="GPA calculator">
+      <div class="courses-panel">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Your semester</p>
+            <h2>Course breakdown</h2>
+          </div>
+          <span class="course-count" id="course-count">0 courses</span>
+        </div>
+
+        <div class="course-list" id="course-list"></div>
+
+        <div class="actions">
+          <button class="add-button" id="add-course" type="button"><span>+</span> Add course</button>
+          <button class="clear-button" id="clear-courses" type="button">Clear all</button>
+        </div>
+      </div>
+
+      <aside class="result-panel">
+        <p class="eyebrow">Weighted average</p>
+        <div class="score" id="gpa-score">0.00</div>
+        <div class="score-rule"><span id="score-fill"></span></div>
+        <p class="result-copy" id="result-copy">Add your courses to see your GPA.</p>
+        <div class="stats">
+          <div><span>Total credits</span><strong id="total-credits">0</strong></div>
+          <div><span>Quality points</span><strong id="quality-points">0.00</strong></div>
+        </div>
+        <p class="scale-note">Based on a 4.00 scale</p>
+      </aside>
+    </section>
+
+    <footer>Grades are calculated using credit-weighted quality points.</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

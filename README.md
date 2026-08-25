@@ -25,3 +25,9 @@ git push origin v1.0.0
 ```
 
 GitHub Actions will build self-contained Linux and Windows downloads and attach them to the new GitHub Release.
+
+### Browser version
+
+The browser calculator is deployed automatically to GitHub Pages at:
+
+https://youtopthat.github.io/vigilant-octo-guide/
