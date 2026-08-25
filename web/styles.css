@@ -15,18 +15,18 @@ body {
   margin: 0;
   color: var(--ink);
   background: radial-gradient(circle at 8% 5%, #d6ead8 0 14%, transparent 33%), var(--paper);
-  font-family: "DM Sans", sans-serif;
+  font-family: "Trebuchet MS", sans-serif;
 }
 
 .shell { width: min(1080px, calc(100% - 40px)); margin: 0 auto; padding: 54px 0 34px; }
 .masthead { display: flex; justify-content: space-between; align-items: flex-start; padding-bottom: 48px; }
 .kicker, .eyebrow, footer, .scale-note { color: var(--muted); font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; }
 .kicker span { display: inline-block; width: 6px; height: 6px; margin: 0 9px 1px; border-radius: 50%; background: var(--coral); }
-h1, h2 { margin: 0; font-family: "Space Grotesk", sans-serif; letter-spacing: 0; }
+h1, h2 { margin: 0; font-family: "Trebuchet MS", sans-serif; letter-spacing: 0; }
 h1 { max-width: 600px; font-size: clamp(44px, 7vw, 78px); line-height: .98; }
 h1 em { color: var(--forest); font-style: normal; }
 .intro { max-width: 390px; margin: 20px 0 0; color: var(--muted); font-size: 17px; line-height: 1.5; }
-.mark { color: var(--forest); font-family: "Space Grotesk", sans-serif; font-size: 12px; letter-spacing: 2px; line-height: 1.1; text-align: right; }
+.mark { color: var(--forest); font-family: "Trebuchet MS", sans-serif; font-size: 12px; letter-spacing: 2px; line-height: 1.1; text-align: right; }
 .mark strong { color: var(--coral); font-size: 34px; letter-spacing: -2px; }
 .workspace { display: grid; grid-template-columns: 1.45fr .8fr; gap: 22px; align-items: stretch; }
 .courses-panel, .result-panel { border: 1px solid var(--line); background: color-mix(in srgb, var(--panel) 94%, transparent); }
@@ -47,14 +47,14 @@ button { font: inherit; cursor: pointer; }
 .add-button { padding: 10px 16px; border: 1px solid var(--forest); border-radius: 3px; color: var(--panel); background: var(--forest); font-weight: 700; }
 .add-button span { margin-right: 8px; font-size: 18px; line-height: 0; }
 .clear-button { padding: 10px 0; border: 0; color: var(--muted); background: transparent; font-size: 13px; }
-.score { margin: 24px 0 20px; color: var(--mint); font-family: "Space Grotesk", sans-serif; font-size: 86px; font-weight: 700; letter-spacing: -5px; line-height: .9; }
+.score { margin: 24px 0 20px; color: var(--mint); font-family: "Trebuchet MS", sans-serif; font-size: 86px; font-weight: 700; letter-spacing: -5px; line-height: .9; }
 .score-rule { height: 7px; overflow: hidden; background: #527563; }
 .score-rule span { display: block; width: 0; height: 100%; background: var(--coral); transition: width .4s ease; }
 .result-copy { min-height: 54px; margin: 21px 0 32px; color: #d7e4d8; line-height: 1.5; }
 .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: auto; padding-top: 20px; border-top: 1px solid #527563; }
 .stats div { display: flex; flex-direction: column; gap: 7px; }
 .stats span { color: #b9d4c0; font-size: 12px; }
-.stats strong { font-family: "Space Grotesk", sans-serif; font-size: 22px; }
+.stats strong { font-family: "Trebuchet MS", sans-serif; font-size: 22px; }
 .scale-note { margin: 28px 0 0; color: #b9d4c0; }
 footer { margin-top: 20px; letter-spacing: .8px; }
 @keyframes rise { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
