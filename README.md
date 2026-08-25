@@ -26,7 +26,7 @@ number of credits for each class.
 
 ### Download a release
 
-Open the repository's **Releases** page and download the archive for your operating system. Extract it, then run `MyApp` on Linux or `MyApp.exe` on Windows.
+Open the repository's **Releases** page and download the archive for your operating system. Extract it, then run `MyApp` on Linux or `MyApp.exe` on Windows. For the browser interface, download `GPA-Calculator-web.zip`, extract it, and open `web/index.html`.
 
 ### Publish a release
 
@@ -40,7 +40,7 @@ git tag v1.0.0
 git push origin v1.0.0
 ```
 
-GitHub Actions will build self-contained Linux and Windows downloads and attach them to the new GitHub Release.
+GitHub Actions will build self-contained Linux and Windows downloads, package the browser version, and attach all three ZIP files to the new GitHub Release.
 
 ### Browser version
 

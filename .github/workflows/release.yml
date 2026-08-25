@@ -32,8 +32,10 @@ jobs:
           cd release
           zip -qr ../MyApp-linux-x64.zip linux-x64
           zip -qr ../MyApp-win-x64.zip win-x64
+          cd ..
+          zip -qr GPA-Calculator-web.zip web
 
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "${GITHUB_REF_NAME}" MyApp-linux-x64.zip MyApp-win-x64.zip --generate-notes --title "GPA Calculator ${GITHUB_REF_NAME}"
+        run: gh release create "${GITHUB_REF_NAME}" MyApp-linux-x64.zip MyApp-win-x64.zip GPA-Calculator-web.zip --generate-notes --title "GPA Calculator ${GITHUB_REF_NAME}"
